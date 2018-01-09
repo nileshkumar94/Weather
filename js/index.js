@@ -19,10 +19,6 @@ function getTemp() {
             var timezone = data.data[0].timezone;
             console.log(timezone);
             $('#timezone').text(timezone);
-            /* var code = data.data[0].weather.code;
-             console.log(code);
-             $('#code').text(code);
-             */
             var description = data.data[0].weather.description;
             console.log(description);
             $('#description').text(description);
