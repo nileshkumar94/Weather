@@ -12,7 +12,9 @@
 
 .temp-size {
     font-size: 5rem;
-    padding-left: 10%;
+    padding-left: 20%;
 }
 
-.weather-icon {}
+.icon-tem {
+    display: flex;
+}
