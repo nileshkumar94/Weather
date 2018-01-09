@@ -15,9 +15,10 @@ function getTemp() {
             $('#temp').text(temp);
             var countryCode = data.data[0].country_code;
             $('#city').text(cityName + "," + countryCode);
-            var timezone = data.data[0].timezone;
-            console.log(timezone);
-            $('#timezone').text(timezone);
+            /* var timezone = data.data[0].timezone;
+             console.log(timezone);
+             $('#timezone').text(timezone);
+             */
             var description = data.data[0].weather.description;
             console.log(description);
             $('#description').text(description);

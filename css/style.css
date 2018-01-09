@@ -1,12 +1,18 @@
 .content {
     margin: 1% auto 1% auto;
     width: 60%;
-    min-height: 60%;
+    min-height: 70%;
     padding-left: 10%;
     padding-top: 2%;
 }
 
-.font-size,
-.temp-size {
+.font-size {
     font-size: 5rem;
 }
+
+.temp-size {
+    font-size: 5rem;
+    padding-left: 10%;
+}
+
+.weather-icon {}
