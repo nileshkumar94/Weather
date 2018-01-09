@@ -45,7 +45,8 @@ function getTemp() {
             $('#description').text(description);
             var icon = data.data[0].weather.icon;
             console.log(icon);
-            $('#icon').text(icon);
+            icons_url = "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
+            $('#icon').html('<img src="' + icons_url + '"</img>');
             var wind_spd = data.data[0].wind_spd;
             console.log(wind_spd);
             $('#wind_spd').text(wind_spd);

@@ -1,3 +1,9 @@
 .body {
     text-align: center;
 }
+
+.content {
+    margin: 1% auto 1% auto;
+    width: 40%;
+    min-height: 100%;
+}
