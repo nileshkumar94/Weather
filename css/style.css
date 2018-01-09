@@ -1,11 +1,12 @@
 .content {
     margin: 1% auto 1% auto;
     width: 60%;
-    height: 60%;
+    min-height: 60%;
     padding-left: 10%;
-    padding-top: 3%;
+    padding-top: 2%;
 }
 
-.font-weight {
+.font-size,
+.temp-size {
     font-size: 5rem;
 }
