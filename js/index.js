@@ -28,15 +28,27 @@ function getTemp() {
             var countryCode = data.data[0].country_code;
             console.log(countryCode);
             $('#countryCode').text(countryCode);
-            var sunrise = data.data["0"].sunrise;
+            var sunrise = data.data[0].sunrise;
             console.log(sunrise);
             $('#sunrise').text(sunrise);
-            var sunset = data.data["0"].sunset;
+            var sunset = data.data[0].sunset;
             console.log(sunset);
             $('#sunset').text(sunset);
             var timezone = data.data[0].timezone;
             console.log(timezone);
             $('#timezone').text(timezone);
+            var code = data.data[0].weather.code;
+            console.log(code);
+            $('#code').text(code);
+            var description = data.data[0].weather.description;
+            console.log(description);
+            $('#description').text(description);
+            var icon = data.data[0].weather.icon;
+            console.log(icon);
+            $('#icon').text(icon);
+            var wind_spd = data.data[0].wind_spd;
+            console.log(wind_spd);
+            $('#wind_spd').text(wind_spd);
 
 
 
