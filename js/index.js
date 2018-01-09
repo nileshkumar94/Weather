@@ -12,17 +12,15 @@ function getTemp() {
             console.log(cityName);
             var temp = data.data[0].temp;
             console.log(temp);
-            $('#temp').text("Current Temperature" + temp);
+            $('#temp').text(temp);
             var countryCode = data.data[0].country_code;
             $('#city').text(cityName + "," + countryCode);
-
             var timezone = data.data[0].timezone;
             console.log(timezone);
             $('#timezone').text(timezone);
             var description = data.data[0].weather.description;
             console.log(description);
             $('#description').text(description);
-
             var icon = data.data[0].weather.icon;
             console.log(icon);
             icons_url = "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
