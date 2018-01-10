@@ -24,7 +24,14 @@ function getTemp() {
             $('#icon').html('<img src="' + icons_url + '"</img>');
             var wind_spd = data.data[0].wind_spd;
             console.log(wind_spd);
-            $('#wind_spd').text("Wind Speed" + wind_spd + "km/hr");
+            $('#wind_spd').text("Wind" + wind_spd + "km/hr");
+            /*var wind_gust = data.data[0].wind_gust;
+            console.log(wind_gust);
+            $('#wind_gust').text("Wind gust" + wind_gust);
+            var humidity = data.data[0].humidity;
+            console.log(humidity);
+            $('#humidity').text("Humidity" + humidity);
+            */
 
 
 
