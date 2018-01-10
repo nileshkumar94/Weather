@@ -12,13 +12,9 @@
 
 .temp-size {
     font-size: 5rem;
-    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .icon-temp {
-    display: flex;
-}
-
-.content-item {
     display: flex;
 }
