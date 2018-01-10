@@ -18,3 +18,8 @@
 .icon-temp {
     display: flex;
 }
+
+.item {
+    display: flex;
+    font-size: 2rem;
+}
