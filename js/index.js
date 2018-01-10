@@ -27,10 +27,10 @@ function getTemp() {
             $('#wind_spd').text("Wind" + wind_spd + "km/hr");
             var sunrise = data.data["0"].sunrise;
             console.log(sunrise);
-            $('#sunrise').text("Sunrise" + sunrise);
+            $('#sunrise').text("Sunrise" + sunrise + "AM");
             var sunset = data.data["0"].sunset;
-            console.log("Sunset" + sunset);
-            $('#sunset').text(sunset);
+            console.log(sunset);
+            $('#sunset').text("Sunset" + sunset + "PM");
 
 
 
