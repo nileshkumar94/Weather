@@ -24,13 +24,13 @@ function getTemp() {
             $('#icon').html('<img src="' + icons_url + '"</img>');
             var wind_spd = data.data[0].wind_spd;
             console.log(wind_spd);
-            $('#wind_spd').text("Wind" + wind_spd + "km/hr");
+            $('#wind_spd').html("<div class='weather-data'><p>Wind </p><p>" + wind_spd + "km/hr</p></div>");
             var sunrise = data.data["0"].sunrise;
             console.log(sunrise);
-            $('#sunrise').text("Sunrise" + sunrise + "AM");
+            $('#sunrise').html("<i class='wi wi-sunrise icon'></i> <div class = 'weather-data'><p> Sunrise </p>" + sunrise + "AM </p></div> ");
             var sunset = data.data["0"].sunset;
             console.log(sunset);
-            $('#sunset').text("Sunset" + sunset + "PM");
+            $('#sunset').html("<div class='weather-data'><p>Sunset</p><p>" + sunset + "PM</p></div>");
 
 
 
