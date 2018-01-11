@@ -12,7 +12,11 @@ function getTemp() {
             console.log(cityName);
             var temp = data.data[0].temp;
             console.log(temp);
-            $('#temp').text(temp);
+            /*var curtemp = Math.round(data.currently.temperature);
+             var curtemp = (data.currently.temperature - 32) * 5 / 9;
+             celTemp = Math.round(celTemp);
+             */
+            $('#temp').html(temp + '  &degC ');
             var countryCode = data.data[0].country_code;
             $('#city').text(cityName + "," + countryCode);
             var description = data.data[0].weather.description;
@@ -31,8 +35,6 @@ function getTemp() {
             var sunset = data.data["0"].sunset;
             console.log(sunset);
             $('#sunset').html("<i class='wi wi-sunset icon'></i><div class='weather-data'><p>Sunset</p><p>" + sunset + "PM</p></div>");
-
-
 
         }
 
