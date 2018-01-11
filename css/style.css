@@ -8,7 +8,7 @@
     margin: 1% auto 1% auto;
     width: 70%;
     padding-left: 8%;
-    padding-top: 2%;
+    padding-top: 5%;
     color: white;
 }
 
@@ -29,6 +29,15 @@
     display: flex;
     font-size: 1rem;
     height: 100px;
+}
+
+.feels-like {
+    padding-left: 15%;
+    font-size: 1rem;
+}
+
+a {
+    color: white;
 }
 
 .wind-speed,

@@ -26,6 +26,7 @@ function getTemp() {
             console.log(icon);
             icons_url = "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
             $('#icon').html('<img src="' + icons_url + '"</img>');
+            $('#feelsLike').html('<a href="#">FEELS LIKE</a>')
             var wind_spd = data.data[0].wind_spd;
             console.log(wind_spd);
             $('#wind_spd').html("<i class='wi wi-day-windy icon'></i><div class='weather-data'><p>Wind </p><p>" + wind_spd + "km/hr</p></div>");
