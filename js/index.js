@@ -8,14 +8,26 @@ function getTemp() {
         dataType: 'jsonp',
         success: function(data) {
             console.log(data);
+
+            function cToF(celsius) {
+                var cTemp = celsius;
+                var cToFahr = cTemp * 9 / 5 + 32;
+                var message = cTemp + '\xB0C is ' + cToFahr + ' \xB0F.';
+                console.log(message);
+            }
+
+            function fToC(fahrenheit) {
+                var fTemp = Math.round(fahrenheit);
+                var fToCel = Math.round(fTemp - 32) * 5 / 9;
+                var message = fTemp + '\xB0F is ' + fToCel + '\xB0C.';
+                console.log(message);
+            }
+            cToF(60);
+            fToC(45);
             var cityName = data.data["0"].city_name;
             console.log(cityName);
             var temp = data.data[0].temp;
             console.log(temp);
-            /*var curtemp = Math.round(data.currently.temperature);
-             var curtemp = (data.currently.temperature - 32) * 5 / 9;
-             celTemp = Math.round(celTemp);
-             */
             $('#temp').html(temp + '  &degC ');
             var countryCode = data.data[0].country_code;
             $('#city').text(cityName + "," + countryCode);
@@ -26,7 +38,7 @@ function getTemp() {
             console.log(icon);
             icons_url = "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
             $('#icon').html('<img src="' + icons_url + '"</img>');
-            $('#feelsLike').html('<a href="#" class="temp-font">FEELS LIKE</a>' + " " + temp);
+            $('#feelsLike').html('<a href="#">FEELS LIKE</a>' + " " + temp);
             var wind_spd = data.data[0].wind_spd;
             console.log(wind_spd);
             $('#wind_spd').html("<i class='wi wi-day-windy icon'></i><div class='weather-data'><p>Wind </p><p>" + wind_spd + "km/hr</p></div>");
