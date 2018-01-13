@@ -30,7 +30,7 @@ function getTemp() {
             var countryCode = data.data[0].country_code;
             $('#city').text(cityName + ", " + countryCode);
             var description = data.data[0].weather.description;
-            $('#description').text(description);
+            $('#description').html("<h5>" + description + "</h5>");
             var icon = data.data[0].weather.icon;
             icons_url = "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
             $('#icon').html('<img src="' + icons_url + '"</img>');
