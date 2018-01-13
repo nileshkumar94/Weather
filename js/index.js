@@ -28,6 +28,7 @@ function getTemp() {
             console.log(cityName);
             var temp = data.data[0].temp;
             console.log(temp);
+            var app_temp = data.data[0].app_temp;
             $('#temp').html(temp + '  &degC ');
             var countryCode = data.data[0].country_code;
             $('#city').text(cityName + "," + countryCode);
@@ -38,17 +39,22 @@ function getTemp() {
             console.log(icon);
             icons_url = "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
             $('#icon').html('<img src="' + icons_url + '"</img>');
-            $('#feelsLike').html('<a href="#">FEELS LIKE</a>' + " " + temp);
+            $('#feelsLike').html('<a href="#">FEELS LIKE</a>' + " " + app_temp);
             var wind_spd = data.data[0].wind_spd;
             console.log(wind_spd);
-            $('#wind_spd').html("<i class='wi wi-day-windy icon'></i><div class='weather-data'><p>Wind </p><p>" + wind_spd + "km/hr</p></div>");
+            $('#wind_spd').html("<i class='wi wi-day-windy icon'></i><div class='weather-data'><p>Wind </p><p>" + wind_spd + " km/hr</p></div>");
             var sunrise = data.data["0"].sunrise;
             console.log(sunrise);
-            $('#sunrise').html("<i class='wi wi-sunrise icon'></i> <div class = 'weather-data'><p> Sunrise </p>" + sunrise + "AM </p></div> ");
+            $('#sunrise').html("<i class='wi wi-sunrise icon'></i> <div class = 'weather-data'><p> Sunrise </p><p>" + sunrise + " AM </p></div> ");
             var sunset = data.data["0"].sunset;
             console.log(sunset);
-            $('#sunset').html("<i class='wi wi-sunset icon'></i><div class='weather-data'><p>Sunset</p><p>" + sunset + "PM</p></div>");
-
+            $('#sunset').html("<i class='wi wi-sunset icon'></i><div class='weather-data'><p>Sunset</p><p>" + sunset + " PM</p></div>");
+            var pressure = data.data["0"].pres;
+            console.log(pressure);
+            $('#pressure').html("<i class='wi wi-barometer icon'></i> <div class = 'weather-data'><p> Pressure </p><p>" + pressure + " mb </p></div> ");
+            var humidity = data.data["0"].rh;
+            console.log(humidity);
+            $('#humidity').html("<i class='wi wi-humidity icon'></i> <div class = 'weather-data'><p> Humidity </p><p>" + humidity + " % </p></div> ");
         }
 
 
