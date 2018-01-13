@@ -28,13 +28,13 @@ function getTemp() {
             var app_temp = data.data[0].app_temp;
             $('#temp').html("<span class='temp-value'>" + temp + '<sup> &degC </sup></span>');
             var countryCode = data.data[0].country_code;
-            $('#city').text(cityName + "," + countryCode);
+            $('#city').text(cityName + ", " + countryCode);
             var description = data.data[0].weather.description;
             $('#description').text(description);
             var icon = data.data[0].weather.icon;
             icons_url = "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
             $('#icon').html('<img src="' + icons_url + '"</img>');
-            $('#feelsLike').html("Feels Like  <span style='font-size:2rem'> " + app_temp + "</span>");
+            $('#feelsLike').html("Feels Like  <span style='font-size:1.5rem'> " + app_temp + "</span>");
             var wind_spd = data.data[0].wind_spd;
             $('#wind_spd').html("<i class='wi wi-windy icon'></i><div class='weather-data'><p>Wind </p><p>" + wind_spd + " km/hr</p></div>");
             var sunrise = data.data["0"].sunrise;

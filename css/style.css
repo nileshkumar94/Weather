@@ -1,6 +1,7 @@
 body {
     cursor: default;
     user-select: none;
+    font-weight: 500;
 }
 
 .body-color {
@@ -24,7 +25,7 @@ body {
 
 .temp-value {
     font-size: 8rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 sup {
@@ -41,6 +42,7 @@ sup {
 .icon-temp {
     display: flex;
     align-items: center;
+    height: 100px;
 }
 
 .item {
