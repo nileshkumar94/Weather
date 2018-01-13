@@ -34,9 +34,9 @@ function getTemp() {
             var icon = data.data[0].weather.icon;
             icons_url = "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
             $('#icon').html('<img src="' + icons_url + '"</img>');
-            $('#feelsLike').html('<a href="#">Feels Like</a>' + " " + app_temp);
+            $('#feelsLike').html("Feels Like  <span style='font-size:2rem'> " + app_temp + "</span>");
             var wind_spd = data.data[0].wind_spd;
-            $('#wind_spd').html("<i class='wi wi-day-windy icon'></i><div class='weather-data'><p>Wind </p><p>" + wind_spd + " km/hr</p></div>");
+            $('#wind_spd').html("<i class='wi wi-windy icon'></i><div class='weather-data'><p>Wind </p><p>" + wind_spd + " km/hr</p></div>");
             var sunrise = data.data["0"].sunrise;
             $('#sunrise').html("<i class='wi wi-sunrise icon'></i> <div class = 'weather-data'><p> Sunrise </p><p>" + sunrise + " AM </p></div> ");
             var sunset = data.data["0"].sunset;
