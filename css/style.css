@@ -1,3 +1,8 @@
+body {
+    cursor: default;
+    user-select: none;
+}
+
 .body-color {
     background: url('../background.jpg');
     background-size: 100% 100%;
@@ -13,8 +18,19 @@
     color: white;
 }
 
-.font-size {
+.city-name {
     font-size: 5rem;
+}
+
+.temp-value {
+    font-size: 8rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+sup {
+    font-size: 30%;
+    vertical-align: top;
+    top: 1.7em;
 }
 
 .temp-size {
@@ -24,6 +40,7 @@
 
 .icon-temp {
     display: flex;
+    align-items: center;
 }
 
 .item {

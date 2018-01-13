@@ -26,7 +26,7 @@ function getTemp() {
             var cityName = data.data["0"].city_name;
             var temp = data.data[0].temp;
             var app_temp = data.data[0].app_temp;
-            $('#temp').html(temp + '  &degC ');
+            $('#temp').html("<span class='temp-value'>" + temp + '<sup> &degC </sup></span>');
             var countryCode = data.data[0].country_code;
             $('#city').text(cityName + "," + countryCode);
             var description = data.data[0].weather.description;
